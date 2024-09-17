@@ -10,8 +10,7 @@
     <title>Generador de contraseñas</title>
     <link rel="stylesheet" href="./assets/style.css">
 </head>
-<body>
-     
+<body>     
     <main class="container">
         <div class="container__contenido">
             <div class="container__informacion">
@@ -21,17 +20,22 @@
                         <label class="texto__parrafo">Cantidad
                             <input class="container__input" type="number" id="cantidad">
                         </label>
-                        <button class="boton" id="generar"  onclick="generar()">Generar</button>
+                        <button class="boton" id="generar" onclick="generar()">Generar</button>
                     </div> 
                     <div class="container__campo">
-                        <input class="container__contrasenia" type="text" id="contrasenia" placeholder="Contraseña">
+                        <div class="container__password">
+                            <input class="container__contrasenia" type="text" id="contrasenia" placeholder="Contraseña">
+                            <span id="mensaje-fortaleza" class="mensaje-fortaleza"></span>
+                        </div>
+                        <div class="container__borrar">
+                            <button class="botonLimpiar" id="botonLimpiar" onclick="limpiarCampos">Borrar todo</button>
+                            <span id="mensaje-fortaleza" class="mensaje-fortaleza"></span>
+                        </div>
                     </div>
                 </div> 
             </div>
-        </div>
- 
-    </main>
-    
+        </div> 
+    </main>    
     <script src="main.js"></script> 
 </body>
 </html>
