@@ -1,5 +1,7 @@
 let cantidad = document.getElementById("cantidad");
 let boton = document.getElementById("generar");
+let password = document.getElementById("contrasenia");
+
 const cadenaCaracteres = "ABCDEFGHIJKLMNOPQRSTUVWXYabcdefghijklmnopqrstuvwxyz0123456789";
 
 function generar() {
@@ -12,11 +14,12 @@ function generar() {
         }
 
     let contrasenia = "";
-    
+
     for(let i=0;i<numeroDigitado;i++) {
-        let caracterAleatorio = Math.floor(Math.random() * cadenaCaracteres.length);
-        contrasenia += cadenaCaracteres[caracterAleatorio];
+        let caracterAleatorio = cadenaCaracteres[Math.floor(Math.random() * cadenaCaracteres.length)];
+        contrasenia += caracterAleatorio;
         }
-        document.getElementById("contrasenia").value = contrasenia;
+    
+        password.value = contrasenia;
     }
 
